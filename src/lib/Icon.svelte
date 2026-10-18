@@ -1,6 +1,10 @@
 <script lang="ts">
 	let { name, size = 20 }: { name: string; size?: number } = $props();
 	const paths: Record<string, string> = {
+		eye: 'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Zm13 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0Z',
+		back: 'M20 12H4m7-7-7 7 7 7',
+		settings:
+			'M9 3h6l1 3 3 1 2 5-2 5-3 1-1 3H9l-1-3-3-1-2-5 2-5 3-1Zm6 9a3 3 0 1 0-6 0 3 3 0 0 0 6 0Z',
 		call: 'M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4c0 2-2 3-4 2C9 19 5 15 3 7c-1-2 0-4 2-4Z',
 		transfer: 'M3 7h18m-4-4 4 4-4 4M21 17H3m4-4-4 4 4 4',
 		wallet: 'M3 5h17v15H3V5Zm0 0 14-3v3M15 11h7v5h-7ZM18 13.5h.01',

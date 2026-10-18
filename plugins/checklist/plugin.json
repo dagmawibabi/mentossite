@@ -1,0 +1,14 @@
+{
+  "id": "checklist",
+  "name": "Checklist",
+  "version": "1.0.0",
+  "author": "Mentos",
+  "description": "Keep a private checklist. Add tasks with /todo and tap a task to mark it done.",
+  "icon": "note",
+  "permissions": [
+    "commands",
+    "storage",
+    "ui"
+  ],
+  "main": "main.js"
+}

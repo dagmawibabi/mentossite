@@ -1,0 +1,14 @@
+{
+  "id": "quick-replies",
+  "name": "Quick replies",
+  "version": "1.0.0",
+  "author": "Mentos",
+  "description": "Save three reusable replies locally, then insert one with /reply 1, /reply 2, or /reply 3.",
+  "icon": "chat",
+  "permissions": [
+    "commands",
+    "storage",
+    "ui"
+  ],
+  "main": "main.js"
+}

@@ -30,13 +30,9 @@
 }
 :root {
 	font-family: Geist, Arial, sans-serif;
-	color: #17251e;
-	background: #f5f6f2;
+	color: var(--ink);
+	background: var(--bg);
 	font-synthesis: none;
-	--green: #26795c;
-	--muted: #69736c;
-	--line: #dde2da;
-	--mint: #e6eddf;
 }
 * {
 	box-sizing: border-box;
@@ -61,7 +57,7 @@ a {
 }
 a:focus-visible,
 button:focus-visible {
-	outline: 3px solid #26795c;
+	outline: 3px solid var(--green);
 	outline-offset: 6px;
 }
 button {
@@ -140,7 +136,7 @@ nav a:hover,
 	align-items: center;
 	gap: 19px;
 	font-size: 13px;
-	border: 1px solid #cbd3c8;
+	border: 1px solid var(--line);
 	padding: 12px 18px;
 	border-radius: 7px;
 	transition: background 0.2s;
@@ -211,12 +207,12 @@ h1 > span {
 		background 0.2s;
 }
 .primary {
-	background: #1d4938;
+	background: var(--button);
 	color: #fff;
 	box-shadow: 0 4px 8px #163b2310;
 }
 .primary:hover {
-	background: #28654c;
+	background: var(--button-hover);
 	transform: translateY(-2px);
 }
 .text-link {
@@ -276,7 +272,7 @@ h1 > span {
 	height: 8px;
 	border-radius: 50%;
 	background: #a9c19c;
-	border: 2px solid #f5f6f2;
+	border: 2px solid var(--bg);
 }
 .node-one {
 	top: 85px;
@@ -293,7 +289,7 @@ h1 > span {
 .phone {
 	width: 282px;
 	height: 575px;
-	background: #fafbf8;
+	background: var(--surface);
 	border: 6px solid #26372d;
 	border-radius: 39px;
 	box-shadow:
@@ -354,7 +350,7 @@ h1 > span {
 	border-radius: 50%;
 	display: grid;
 	place-items: center;
-	background: #e1e8d9;
+	background: var(--mint);
 	font-size: 10px;
 	position: relative;
 }
@@ -399,11 +395,11 @@ h1 > span {
 	gap: 14px;
 	padding: 17px 18px 9px;
 	font-size: 8px;
-	color: #69736c;
+	color: var(--muted);
 }
 .app-filters .selected {
-	background: #e1ecdf;
-	color: #2e694c;
+	background: var(--accent-soft);
+	color: var(--green);
 	padding: 6px 9px;
 	border-radius: 5px;
 	font-weight: 600;
@@ -430,7 +426,7 @@ h1 > span {
 	flex-shrink: 0;
 }
 .sage {
-	background: #e1e8d9;
+	background: var(--mint);
 	color: #52674b;
 }
 .peach {
@@ -495,11 +491,11 @@ h1 > span {
 }
 .phone-nav {
 	margin-top: auto;
-	border-top: 1px solid #e4e9df;
+	border-top: 1px solid var(--line);
 	display: flex;
 	justify-content: space-around;
 	padding: 11px 8px 8px;
-	background: #fafbf8;
+	background: var(--surface);
 }
 .phone-nav button,
 .mock-nav-item {
@@ -516,10 +512,10 @@ h1 > span {
 	padding: 2px;
 }
 .phone-nav button.active {
-	color: #26795c;
+	color: var(--green);
 }
 .phone-nav button:hover {
-	background: #e4eddf;
+	background: var(--accent-soft);
 	border-radius: 5px;
 }
 .home-indicator {
@@ -537,16 +533,16 @@ h1 > span {
 	align-items: center;
 	gap: 11px;
 	padding: 14px;
-	background: #fffffff2;
-	border: 1px solid #e8ece3;
+	background: var(--surface);
+	border: 1px solid var(--line);
 	border-radius: 11px;
 	box-shadow: 0 10px 30px #2e452211;
 	font-size: 10px;
 	line-height: 1.7;
-	color: #788372;
+	color: var(--muted);
 }
 .floating-note strong {
-	color: #374831;
+	color: var(--ink);
 	font-weight: 500;
 }
 .note-icon {
@@ -555,8 +551,8 @@ h1 > span {
 	width: 34px;
 	height: 34px;
 	border-radius: 9px;
-	background: #edf2e9;
-	color: #5d7c50;
+	background: var(--mint);
+	color: var(--green);
 }
 .note-top {
 	right: 0;
@@ -580,7 +576,7 @@ h1 > span {
 	font-family: 'Geist Mono', monospace;
 	font-size: 8px;
 	letter-spacing: 1.1px;
-	color: #89917f;
+	color: var(--muted);
 }
 .preview-caption span {
 	margin: 0 7px;
@@ -598,7 +594,7 @@ h1 > span {
 	gap: 10px;
 	align-items: center;
 	font-size: 11px;
-	color: #67745f;
+	color: var(--muted);
 }
 .principles svg {
 	width: 17px;
@@ -639,19 +635,19 @@ h2 {
 .feature-icon {
 	width: 47px;
 	height: 47px;
-	border: 1px solid #dbe3d5;
-	background: #eaf0e3;
+	border: 1px solid var(--line);
+	background: var(--mint);
 	border-radius: 13px;
 	display: grid;
 	place-items: center;
-	color: #59744a;
+	color: var(--green);
 	margin-bottom: 27px;
 }
 .micro-label {
 	font-family: 'Geist Mono', monospace;
 	font-size: 8px;
 	letter-spacing: 1.2px;
-	color: #78836f;
+	color: var(--muted);
 	margin-bottom: 11px;
 }
 .feature h3 {
@@ -668,9 +664,9 @@ h2 {
 	color: var(--muted);
 }
 .ownership {
-	border: 1px solid #dde5d5;
+	border: 1px solid var(--line);
 	border-radius: 17px;
-	background: #eaf0e3;
+	background: var(--mint);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding: 56px 42px;
@@ -683,21 +679,21 @@ h2 {
 .ownership-copy > p:not(.eyebrow) {
 	font-size: 12px;
 	line-height: 1.9;
-	color: #6b7663;
+	color: var(--muted);
 }
 .ownership-detail {
 	display: flex;
 	gap: 10px;
 	margin-top: 17px;
-	color: #4d7146;
+	color: var(--green);
 }
 .ownership-detail p {
-	color: #697760;
+	color: var(--muted);
 	font-size: 11px;
 	line-height: 1.8;
 }
 .ownership-detail strong {
-	color: #3d5136;
+	color: var(--ink);
 	font-weight: 500;
 }
 .ownership-copy .text-link {
@@ -717,8 +713,8 @@ h2 {
 	width: 94px;
 	height: 125px;
 	border-radius: 17px;
-	background: #f8faf4;
-	border: 1px solid #d4dfca;
+	background: var(--surface);
+	border: 1px solid var(--line);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -726,7 +722,7 @@ h2 {
 	gap: 20px;
 	box-shadow: 0 14px 25px #4b653210;
 	transform: rotate(-8deg);
-	color: #5b7650;
+	color: var(--green);
 }
 .device-node.friend {
 	transform: rotate(8deg);
@@ -741,9 +737,9 @@ h2 {
 	align-items: center;
 	flex-direction: column;
 	gap: 13px;
-	color: #5b7650;
+	color: var(--green);
 	z-index: 1;
-	background: #eaf0e3;
+	background: var(--mint);
 	padding: 12px 8px;
 }
 .connection-middle > span:nth-child(2) {
@@ -757,14 +753,14 @@ h2 {
 	left: 15%;
 	right: 15%;
 	top: 50%;
-	border-top: 1px dashed #b9c9ad;
+	border-top: 1px dashed var(--line);
 	z-index: 0;
 }
 .ownership-caption {
 	position: absolute;
 	bottom: 38px;
 	font-size: 10px;
-	color: #7a886d;
+	color: var(--muted);
 }
 .download-section {
 	text-align: center;
@@ -803,18 +799,18 @@ footer .brand img {
 }
 footer p {
 	font-size: 11px;
-	color: #7c8676;
+	color: var(--muted);
 }
 footer > a:last-child {
 	font-size: 10px;
-	color: #66745d;
+	color: var(--muted);
 	gap: 10px;
 }
 .stories {
 	display: flex;
 	justify-content: space-around;
 	padding: 7px 13px 14px;
-	border-bottom: 1px solid #e8ece3;
+	border-bottom: 1px solid var(--line);
 }
 .stories > div {
 	display: flex;
@@ -945,7 +941,7 @@ footer > a:last-child {
 	gap: 16px;
 	padding: 5px 20px 17px 60px;
 	color: #849079;
-	border-bottom: 1px solid #e8ece3;
+	border-bottom: 1px solid var(--line);
 }
 .channel-list span {
 	display: flex;
@@ -954,7 +950,7 @@ footer > a:last-child {
 .channel-list i {
 	font-size: 8px;
 	font-style: normal;
-	color: #26795c;
+	color: var(--green);
 }
 @media (min-width: 1441px) {
 	h1 {
@@ -1355,7 +1351,7 @@ footer > a:last-child {
 }
 .tool-card {
 	padding: 25px;
-	background: #fafbf8;
+	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: 13px;
 	display: flex;
@@ -1400,7 +1396,7 @@ footer > a:last-child {
 	height: 155px;
 	flex-shrink: 0;
 	margin: 24px 0;
-	background: #edf1e9;
+	background: var(--mint);
 	border-radius: 9px;
 	padding: 18px;
 }
@@ -1408,7 +1404,7 @@ footer > a:last-child {
 	font:
 		8px 'Geist Mono',
 		monospace;
-	color: #69736c;
+	color: var(--muted);
 	letter-spacing: 1px;
 }
 .wallet-illustration > strong {
@@ -1423,7 +1419,7 @@ footer > a:last-child {
 		10px 'Geist Mono',
 		monospace;
 	letter-spacing: 0;
-	color: #69736c;
+	color: var(--muted);
 }
 .wallet-illustration > div {
 	display: flex;
@@ -1445,7 +1441,7 @@ footer > a:last-child {
 	gap: 8px;
 	align-items: center;
 	font-size: 10px;
-	color: #46603d;
+	color: var(--green);
 }
 .diagnostics-illustration > span {
 	display: flex;
@@ -1458,16 +1454,16 @@ footer > a:last-child {
 	display: flex;
 	justify-content: space-between;
 	gap: 7px;
-	border-top: 1px solid #dce3d6;
+	border-top: 1px solid var(--line);
 	padding: 9px 0;
 	font:
 		7px 'Geist Mono',
 		monospace;
-	color: #69736c;
+	color: var(--muted);
 }
 .diagnostics-illustration strong {
 	font-weight: 400;
-	color: #35512e;
+	color: var(--green);
 }
 .crypto-strip {
 	display: flex;
@@ -1481,7 +1477,7 @@ footer > a:last-child {
 .crypto-strip h3 {
 	font-size: 15px;
 	font-weight: 500;
-	color: #17251e;
+	color: var(--ink);
 	margin-bottom: 7px;
 }
 .crypto-strip p {
@@ -1598,4 +1594,3 @@ footer > a:last-child {
 		letter-spacing: 0.3px;
 	}
 }
-

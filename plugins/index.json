@@ -1,0 +1,53 @@
+{
+  "name": "Mentos community plugins",
+  "version": 1,
+  "plugins": [
+    {
+      "id": "checklist",
+      "name": "Checklist",
+      "version": "1.0.0",
+      "author": "Mentos",
+      "description": "Keep a private checklist. Add tasks with /todo and tap a task to mark it done.",
+      "icon": "note",
+      "permissions": [
+        "commands",
+        "storage",
+        "ui"
+      ],
+      "main": "main.js",
+      "sha256": "e74be3392e0cd790ad141256725559c1edf5ac8ee06a26b735a46647be1c0dac",
+      "manifest": "checklist/plugin.json"
+    },
+    {
+      "id": "focus",
+      "name": "Focus timer",
+      "version": "1.0.0",
+      "author": "Mentos",
+      "description": "Start a 25-minute focus session with an in-app reminder. Runs while Mentos is open.",
+      "icon": "timer",
+      "permissions": [
+        "ui",
+        "notify"
+      ],
+      "main": "main.js",
+      "sha256": "73b02564f5a1ae60a8039b219d3322b71b7808a279f265aa802d886cd5662359",
+      "manifest": "focus/plugin.json"
+    },
+    {
+      "id": "quick-replies",
+      "name": "Quick replies",
+      "version": "1.0.0",
+      "author": "Mentos",
+      "description": "Save three reusable replies locally, then insert one with /reply 1, /reply 2, or /reply 3.",
+      "icon": "chat",
+      "permissions": [
+        "commands",
+        "storage",
+        "ui"
+      ],
+      "main": "main.js",
+      "sha256": "f95958cd3b4078db75b566b48b305890a158d3562cfe731c1cbc0b33bdfb933f",
+      "manifest": "quick-replies/plugin.json"
+    }
+  ]
+}

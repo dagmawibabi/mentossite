@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Icon from '#lib/Icon.svelte';
 	import AppPreview from '#lib/AppPreview.svelte';
+	import ThemeToggle from '#lib/ThemeToggle.svelte';
+	import DeepDive from '#lib/DeepDive.svelte';
+	import PluginSection from '#lib/PluginSection.svelte';
 	const repo = 'https://github.com/dagmawibabi/mentos';
 	const download = `${repo}/releases/latest`;
 	const features = [
@@ -37,7 +40,7 @@
 		name="description"
 		content="Your social life, held in your hand. Meet Mentos: peer-to-peer chats, stories, calls, and communities. Get the Android app on GitHub."
 	/>
-	<meta name="theme-color" content="#f5f6f2" />
+	<meta name="color-scheme" content="light dark" />
 	<meta property="og:title" content="Mentos — Your people. Your space." />
 	<meta
 		property="og:description"
@@ -53,13 +56,15 @@
 			><img src="/logo.jpg" alt="" />mentos<span class="brand-dot">.</span></a
 		>
 		<nav aria-label="Main navigation">
-			<a href="#features">Features</a><a href="#your-data">Your data</a><a
-				href={repo}
-				target="_blank"
-				rel="noreferrer">GitHub <Icon name="arrow-up" size={13} /></a
-			>
+			<a href="/plugins">Plugins</a><a href="#features">Features</a><a href="#protocols">Protocols</a><a href="#your-data"
+				>Your data</a
+			><a href={repo} target="_blank" rel="noreferrer">GitHub <Icon name="arrow-up" size={13} /></a>
 		</nav>
-		<a class="nav-download" href={download}>Get Mentos <Icon name="download" size={16} /></a>
+		<div class="header-actions">
+			<ThemeToggle /><a class="nav-download" href={download}
+				>Get Mentos <Icon name="download" size={16} /></a
+			>
+		</div>
 	</header>
 	<main id="main">
 		<section class="hero" aria-labelledby="hero-title">
@@ -102,7 +107,7 @@
 					<span class="live-dot"></span>
 				</div>
 				<div class="preview-caption">
-					ILLUSTRATIVE PREVIEW <span>·</span> EXPLORE CHATS, GROUPS & CHANNELS ↑
+					ILLUSTRATIVE PREVIEW <span>·</span> SAMPLE DATA · TRY ALL FIVE TABS ↑
 				</div>
 			</div>
 		</section>
@@ -326,6 +331,8 @@
 				</div>
 			</div>
 		</section>
+		<PluginSection />
+		<DeepDive />
 		<section id="download" class="download-section">
 			<div class="eyebrow"><span class="live-dot"></span> LESS BETWEEN YOU AND YOUR PEOPLE</div>
 			<h2>Make yourself at home.</h2>

@@ -1,0 +1,13 @@
+{
+  "id": "focus",
+  "name": "Focus timer",
+  "version": "1.0.0",
+  "author": "Mentos",
+  "description": "Start a 25-minute focus session with an in-app reminder. Runs while Mentos is open.",
+  "icon": "timer",
+  "permissions": [
+    "ui",
+    "notify"
+  ],
+  "main": "main.js"
+}

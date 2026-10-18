@@ -1,0 +1,119 @@
+:root {
+	color-scheme: light;
+	--bg: #f5f6f2;
+	--ink: #17251e;
+	--surface: #fafbf8;
+	--green: #26795c;
+	--muted: #69736c;
+	--line: #dde2da;
+	--mint: #e6eddf;
+	--accent-soft: #e1ecdf;
+	--button: #1d4938;
+	--button-hover: #28654c;
+	--app-bg: #f5f6f5;
+	--app-surface: #fff;
+	--app-raised: #edefee;
+	--app-line: #e1e4e2;
+	--app-ink: #0d1110;
+	--app-soft: #2c3330;
+	--app-muted: #68716d;
+	--app-faint: #a3aaa6;
+	--app-accent: #0e9f6e;
+	--app-accent-soft: #e0f3ea;
+	--app-on-accent: #fff;
+	--app-sigil: #434c47;
+}
+:root[data-theme='dark'] {
+	color-scheme: dark;
+	--bg: #0a0c0b;
+	--ink: #ecefed;
+	--surface: #121514;
+	--green: #34d399;
+	--muted: #a0aaa4;
+	--line: #29332d;
+	--mint: #17231c;
+	--accent-soft: #0f2a1f;
+	--button: #23674d;
+	--button-hover: #2c8060;
+	--app-bg: #0a0c0b;
+	--app-surface: #121514;
+	--app-raised: #1a1e1c;
+	--app-line: #232826;
+	--app-ink: #ecefed;
+	--app-soft: #c9cfcc;
+	--app-muted: #89928e;
+	--app-faint: #717b75;
+	--app-accent: #34d399;
+	--app-accent-soft: #0f2a1f;
+	--app-on-accent: #04140d;
+	--app-sigil: #b2bab5;
+}
+.header-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+:root[data-theme='dark'] .hero-visual:before {
+	background: radial-gradient(circle, #184b343d, transparent 70%);
+}
+:root[data-theme='dark'] .orbit {
+	border-color: #3c644148;
+}
+:root[data-theme='dark'] .orbit-node {
+	background: #52745a;
+	border-color: var(--bg);
+}
+:root[data-theme='dark'] .note-icon {
+	color: var(--green);
+}
+:root[data-theme='dark'] .skip-link {
+	background: var(--surface);
+}
+:root[data-theme='dark'] .phone {
+	box-shadow:
+		0 26px 45px -18px #0009,
+		0 0 0 1px #526056;
+}
+:root[data-theme='dark'] .home-indicator {
+	background: #89928e;
+}
+:root[data-theme='dark'] ::selection {
+	background: #25573d;
+	color: #fff;
+}
+:root[data-theme='dark'] .button.primary {
+	color: #fff;
+}
+@media (max-width: 1000px) {
+	header nav {
+		gap: 17px;
+		font-size: 12px;
+	}
+	.header-actions {
+		gap: 7px;
+	}
+}
+@media (max-width: 400px) {
+	.nav-download {
+		gap: 7px;
+		padding: 10px;
+	}
+	.header-actions {
+		gap: 6px;
+	}
+}
+@media (max-width: 400px) {
+	header .brand {
+		font-size: 23px;
+	}
+	header .brand img {
+		width: 25px;
+		height: 25px;
+		margin-right: 8px;
+	}
+	.header-actions .nav-download {
+		font-size: 10px;
+		padding: 10px 9px;
+		gap: 5px;
+	}
+}
