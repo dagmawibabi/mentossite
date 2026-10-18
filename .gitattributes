@@ -1,0 +1,4 @@
+
+# Plugin hashes must match the bytes published by GitHub.
+plugins/** text eol=lf
+static/plugins/** text eol=lf

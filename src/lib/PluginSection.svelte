@@ -3,7 +3,7 @@
 </script>
 <section class="plugin-section" id="plugins" aria-labelledby="plugin-heading">
  <div class="intro"><p class="eyebrow">SMALL TOOLS. MORE POSSIBILITIES.</p><h2 id="plugin-heading">Make room for<br /><em>your own ideas.</em></h2><p>Give Mentos a new command, a personal tool, or a different look. Plugins run inside the app and build pages with its native UI.</p><a class="button primary" href="/plugins">Explore plugins <span aria-hidden="true">↗</span></a></div>
- <div class="plugin-list">{#each catalog.plugins as plugin, i}<a href={`/plugins#${plugin.id}`}><span class="number">0{i+1}</span><div><h3>{plugin.name}</h3><p>{plugin.description}</p><small>{plugin.permissions.join(' · ')}</small></div><span aria-hidden="true">↗</span></a>{/each}</div>
+ <div class="plugin-list">{#each catalog.plugins as plugin, i}<a href={`/plugins#mentossite-${plugin.id}`}><span class="number">0{i+1}</span><div><h3>{plugin.name}</h3><p>{plugin.description}</p><small>{plugin.permissions.join(' · ')}</small></div><span aria-hidden="true">↗</span></a>{/each}</div>
  <div class="plugin-foot"><strong>You choose what runs.</strong><span>Review permissions before installing. Disable or remove plugins in Settings → Plugins. The sandbox exposes only approved APIs.</span></div>
 </section>
 <style>

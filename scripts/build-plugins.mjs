@@ -5,7 +5,8 @@ for (const dir of (await readdir('plugins', {withFileTypes:true})).filter(d=>d.i
  const base = `plugins/${dir.name}`;
  const manifest = JSON.parse(await readFile(`${base}/plugin.json`,'utf8'));
  if (manifest.id !== dir.name || manifest.main !== 'main.js') throw new Error(`Invalid plugin: ${dir.name}`);
- const source = await readFile(`${base}/main.js`,'utf8');
+ const source = (await readFile(`${base}/main.js`,'utf8')).replaceAll('\r\n','\n');
+ await writeFile(`${base}/main.js`,source);
  const sha256 = createHash('sha256').update(source).digest('hex');
  await mkdir(`static/${base}`,{recursive:true});
  await writeFile(`static/${base}/plugin.json`,JSON.stringify(manifest,null,2)+'\n');
