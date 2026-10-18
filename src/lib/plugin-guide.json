@@ -1,0 +1,11 @@
+{
+  "hello": "/* @plugin {\"id\":\"hello-plugin\",\"name\":\"Hello plugin\",\"version\":\"1.0.0\",\"permissions\":[\"commands\"]} */\nmentos.commands.add('hello', 'Say hello', (args) => {\n  return args.trim() ? 'Hello, ' + args.trim() + '!' : 'Hello from Mentos!';\n});",
+  "counter": "let count = mentos.storage.get('count', 0);\nmentos.ui.page({\n  id: 'main', title: 'My counter', icon: 'calculate',\n  render: () => [\n    { type: 'stat', label: 'Taps', value: String(count) },\n    { type: 'button', label: 'Add one', onTap: () => {\n      count++;\n      mentos.storage.set('count', count);\n    } },\n  ],\n});",
+  "manifest": "{\n  \"id\": \"my-counter\",\n  \"name\": \"My counter\",\n  \"version\": \"1.0.0\",\n  \"author\": \"Your name\",\n  \"description\": \"A counter that remembers your taps.\",\n  \"icon\": \"calculate\",\n  \"permissions\": [\n    \"ui\",\n    \"storage\"\n  ],\n  \"main\": \"main.js\"\n}",
+  "tree": "plugins/\n  my-counter/\n    plugin.json\n    main.js\n  index.json             # generated",
+  "slots": "mentos.ui.slot('feed.top', () => [\n  { type: 'text', text: 'A small reminder for today.' },\n]);\nmentos.ui.tab({ title: 'Counter', icon: 'calculate', page: 'main' });",
+  "network": "mentos.http.get('https://api.example.com/status', (response) => {\n  if (!response.ok) {\n    mentos.log(response.error);\n    return;\n  }\n  mentos.log(response.json);\n  mentos.ui.refresh();\n});",
+  "peers": "mentos.peers.on((message) => {\n  mentos.log(message.name, message.data);\n});\n// Call from your UI after the user chooses a contact:\nfunction ping(contactId) {\n  mentos.peers.send(contactId, { kind: 'ping' });\n}",
+  "theme": "mentos.theme.set({\n  accent: '#7C3AED',\n  dark: { bg: '#0B0A1A', surface: '#13112A' },\n});\nmentos.layout.set({\n  hideTabs: ['wallet'],\n  density: 'compact',\n  navLabels: false,\n});",
+  "curl": "curl -X POST http://127.0.0.1:8787/v1/plugins -H \"Authorization: Bearer <access code>\" --data-binary @hello.js"
+}
